@@ -125,8 +125,8 @@ class DraftService:
             deadline = d.auto_approve_deadline.replace(tzinfo=timezone.utc) if d.auto_approve_deadline.tzinfo is None else d.auto_approve_deadline
             if deadline <= now:
                 inbound = db.query(InboundMessage).filter(InboundMessage.id == d.inbound_message_id).first()
-                sentiment = inbound.sentiment if inbound else "neutral"
-                intent = inbound.intent if inbound else "general_query"
+                sentiment = inbound.detected_sentiment if inbound and hasattr(inbound, "detected_sentiment") else "neutral"
+                intent = inbound.detected_intent if inbound and hasattr(inbound, "detected_intent") else "general_query"
                 raw_text = inbound.raw_text if inbound else ""
 
                 try:
