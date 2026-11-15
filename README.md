@@ -358,5 +358,5 @@ GitHub: https://github.com/kavinghowtham-s/Titan-Devs
 <p align="center">
   <strong>OmniBix AI – One Intelligence. Every Business Operation.</strong>
   <br>
-  Built with innovation by Team Titan Devs 🚀
+  Built with innovation by Team Titan Devs 
 </p>
